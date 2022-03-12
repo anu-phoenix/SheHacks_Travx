@@ -1,0 +1,11 @@
+extends base 
+
+block script
+    link(rel="stylesheet", href="/css/loginSignup.css")
+
+block content
+
+    - if(login === true) 
+        include _login
+    - else 
+        include _signup
