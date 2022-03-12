@@ -149,6 +149,7 @@ h5::after {
 	outline: none;
 	border: 1px solid #64a9a5;
 	border-radius: 8px;
+	color: #fff;
 }
 
 .btn {
