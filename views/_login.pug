@@ -22,7 +22,9 @@ block content
             h5 OR
             form(class="form--login")
                 label(for="username") Username/Email address
-                input(type="username" name="username" class="input")
+                input(type="username" name="username" class="input" id="email")
                 label(for="password") Password
-                input(type="password" name="password" class="input")
+                input(type="password" name="password" class="input" id="password")
                 button(type="submit" class="btn") Get Started
+    
+    script(src="/js/login.js") 

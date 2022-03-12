@@ -8,9 +8,17 @@ block content
         div(class="navbar")
             div(class="icon")
                 img(src="/image/logo.png" class="logoimage" alt="error")
-            a(href="/login" class="btn login") Log in
+            - if (user === false)
+                a(href="/login" class="btn login") Log in
+            - else
+                div(class="nav")
+                    a(href="/profile")
+                        img(src="/image/profile pic.png", alt="profile" class="profile")
         div(class="content")
             p(class="intro") Are you one of them in the group who keeps track of
             p(class="exp") Expenditure?
             p(class="par") Let's keep the load less and enjoy more!
-            a(href="/signup" class="btn signup") Start Your Journey
+            - if (user === true)
+                a(href="/createroom" class="btn signup") Start Your Journey
+            - else
+                a(href="/signup" class="btn signup") Let Us Serve You

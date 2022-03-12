@@ -7,7 +7,6 @@ const bcrypt = require('bcryptjs');
 const UserSchema = new mongoose.Schema({
 	name: {
 		type: String,
-		require: [true, 'Please provide your name'],
 	},
 	email: {
 		type: String,
@@ -16,13 +15,14 @@ const UserSchema = new mongoose.Schema({
 		lowercase: true,
 		validate: [validator.isEmail, 'Please provide a valid email address'],
 	},
+	username: {
+		type: String,
+		require: [true, 'Please provide your username'],
+		unique: [true, 'Account with this username already exists'],
+		lowercase: true,
+	},
 	photo: {
 		type: String,
-	},
-	role: {
-		type: String,
-		enum: ['user', 'guide', 'lead-guide', 'admin'],
-		default: 'user',
 	},
 	password: {
 		type: String,
@@ -54,6 +54,25 @@ const UserSchema = new mongoose.Schema({
 		default: true,
 		select: false,
 	},
+	room: {
+		type: mongoose.Schema.ObjectId,
+		default: null,
+	},
+	transactions: [
+		{
+			tobe: {
+				type: String,
+				enum: ['sent', 'recieved'],
+			},
+			user: {
+				type: mongoose.Schema.ObjectId,
+			},
+			amount: {
+				type: Number,
+				minvalue: [0, 'Transaction amount must greater than zero'],
+			},
+		},
+	],
 });
 
 UserSchema.pre('save', async function (next) {

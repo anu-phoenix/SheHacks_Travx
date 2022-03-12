@@ -29,6 +29,17 @@ body::before {
 	padding: 1rem;
 }
 
+.nav {
+	display: flex;
+	justify-content: space-between;
+	height: 75px;
+	padding: 1rem;
+}
+
+.profile {
+	height: 100%;
+}
+
 .icon {
 	width: 200px;
 	float: left;
