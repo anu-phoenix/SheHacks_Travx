@@ -1,0 +1,58 @@
+extends base
+
+block style
+    link(rel="stylesheet", href="/css/endtrip.css")
+
+block content
+    .top--container 
+        img(src="/image/12-dots.png", alt="12 Dots" class="dots")
+        div(class="nav")                        
+            img(src="/image/profile pic.png", alt="profile" class="profile")
+    span(class="label--welcome") Welcome Back! Your stats are ready! :)
+    .total--spending 
+        span(class="label--total") Total Spending
+        div(class="label--cost") ₹10,000
+    .individual--spending 
+        span(class="label--individual") Individual Spending
+        div(class="all--stat")
+            div(class="mem--1") 
+                div(class="pie animate no-round" style="--p:44;--c:#64A9A5;--b:10px") 44%
+                p(class="name name-mem1") Aayush
+            div(class="mem--2") 
+                div(class="pie animate no-round" style="--p:20;--c:#64A9A5;--b:10px") 20%
+                p(class="name name-mem2") Sakshi
+            div(class="mem--3") 
+                div(class="pie animate no-round" style="--p:24;--c:#64A9A5;--b:10px") 24%
+                p(class="name name-mem3") Anushtha
+            div(class="mem--4") 
+                div(class="pie animate no-round" style="--p:12;--c:#64A9A5;--b:10px") 12%
+                p(class="name name-mem4") Harshita 
+
+
+        div(class="grp--card")
+            div(class="card card--1") 
+                div(class="details") 
+                    p(class="name--card name-card1") Aayush
+                    p(class="status recieve") Have to recieve
+                    div(class="label--cost card--cost") ₹1900
+                p(class="know--more") More Details
+            div(class="card card--2") 
+                div(class="details") 
+                    p(class="name--card name-card2") Sakshi
+                    p(class="status pay") Have to pay
+                    div(class="label--cost card--cost") ₹500
+                p(class="know--more") More Details
+            div(class="card card--3") 
+                div(class="details") 
+                    p(class="name--card name-card3") Anushtha
+                    p(class="status pay") Have to pay
+                    div(class="label--cost card--cost") ₹100
+                p(class="know--more") More Details
+            div(class="card card--4") 
+                div(class="details") 
+                    p(class="name--card name-card4") Harshita 
+                    p(class="status pay") Have to pay
+                    div(class="label--cost card--cost") ₹1300
+                p(class="know--more") More Details
+    .bottom--design 
+        img(src="/image/bottom-design.png", alt="bottom" class="bottom")

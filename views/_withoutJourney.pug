@@ -1,4 +1,16 @@
-// Home Page
-.container 
-    p.greetings Hello User
-    a.signup(href="/signup") Signup 
+extends base
+
+block style
+    link(rel="stylesheet", href="/css/_withoutJourney.css")
+
+block content
+    div(class="main")
+        div(class="navbar")
+            div(class="icon")
+                img(src="/image/logo.png" class="logoimage" alt="error")
+            a(href="/login" class="btn login") Log in
+        div(class="content")
+            p(class="intro") Are you one of them in the group who keeps track of
+            p(class="exp") Expenditure?
+            p(class="par") Let's keep the load less and enjoy more!
+            a(href="/signup" class="btn signup") Start Your Journey

@@ -9,5 +9,7 @@ router.get('/withoutJourney', viewController.getHomePageWithoutJourney);
 router.get('/signup', viewController.getSignupPage);
 router.get('/login', viewController.getLoginPage);
 router.get('/createRoom', viewController.getCreateRoomPage);
+router.get('/endtrip', viewController.getEndTripPage);
+router.get('/profile', viewController.getProfilePage);
 
 module.exports = router;

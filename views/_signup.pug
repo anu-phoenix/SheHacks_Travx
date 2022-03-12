@@ -1,0 +1,31 @@
+extends base
+
+block style
+    link(rel="stylesheet", href="/css/loginSignup.css")
+
+block content
+    div(class="content")
+        div(class="logo-sec")
+            img(src="/image/logo.png" alt="")
+        div(class="form-container")
+            div(class="form--content signup--form")
+                div(class="form--text")
+                    p(class="start") Start Your Trip!
+                    p(class="already") If already have an account 
+                        a(href="/signin" class="signin") sign in
+                div(class="form--btns")
+                    a(href="#" class="options") 
+                        img(src="/image/google-logo.png" alt="google Logo") 
+                        p Sign in with Google
+                    a(href="#" class="options") 
+                        img(src="/image/apple-logo.png" alt="Apple Logo") 
+                        p Sign in with Apple
+                h5 OR
+                form(class="form--login")
+                    label(for="username") Username
+                    input(type="username" name="username" class="input") 
+                    label(for="email") E-mail
+                    input(type="email" name="email" class="input") 
+                    label(for="password") Password
+                    input(type="password" name="password" class="input")
+                    button(type="submit" class="btn") Get Started

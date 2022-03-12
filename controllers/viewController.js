@@ -31,3 +31,15 @@ exports.getLoginPage = (req, res, next) => {
 		login: false,
 	});
 };
+
+exports.getEndTripPage = (req, res, next) => {
+	res.status(200).render('endtrip', {
+		title: 'End Trip',
+	});
+};
+
+exports.getProfilePage = (req, res, next) => {
+	res.status(200).render('profile', {
+		title: 'Profile',
+	});
+};

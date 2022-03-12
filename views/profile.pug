@@ -1,0 +1,56 @@
+extends base
+
+block style
+    link(rel="stylesheet", href="/css/profile.css")
+
+block content
+    .top--container 
+        img(src="/image/12-dots.png", alt="12 Dots" class="dots")
+        div(class="nav")
+            button(class="btn-design btn--invite") Invites
+            a(class="btn-design create--room" href="/create-room") Create Room
+            img(src="/image/profile pic.png", alt="profile" class="profile")
+    span(class="label--welcome") Hello Sakshi!
+    div(class="journey") 
+        span(class="label--journey") Your Journey with us 
+        span(class="count--journey") 1
+    .transactions 
+        .transaction--details
+            span(class="label--transactions") Your pending transactions:
+            div(class="all--cards")
+                div(class="cards card--1") 
+                    div(class="complete--status")
+                        div(class="status")
+                            span(class="amount--to") Amount to be 
+                            span(class="transac recieved") Received
+                        div(class="done--by") By Anushtha
+                    div(class="btn-design value--amount") ₹500 
+
+                div(class="cards card--2") 
+                    div(class="complete--status")
+                        div(class="status")
+                            span(class="amount--to") Amount to be 
+                            span(class="transac recieved") Received
+                        div(class="done--by") By Anushtha
+                    div(class="btn-design value--amount") ₹500
+
+                div(class="cards card--3") 
+                    div(class="complete--status")
+                        div(class="status")
+                            span(class="amount--to") Amount to be 
+                            span(class="transac recieved") Received
+                        div(class="done--by") By Anushtha
+                    div(class="btn-design value--amount") ₹500
+
+                div(class="cards card--4") 
+                    div(class="complete--status")
+                        div(class="status")
+                            span(class="amount--to") Amount to be 
+                            span(class="transac recieved") Received
+                        div(class="done--by") By Anushtha
+                    div(class="btn-design value--amount") ₹500
+        .illustration 
+            img(src="/image/profile-illustration.png", alt="profile-illus" class="profile-illustration")
+
+    .bottom--design 
+        img(src="/image/bottom-design.png", alt="bottom" class="bottom")

@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html,
+body {
+	height: 100%;
+	width: 100%;
+}
+
+:root {
+	font-family: 'Poppins', sans-serif;
+}
+
+body {
+	background-color: #f0f5f8;
+}
+
+/* .top--container {
+	display: flex;
+	justify-content: space-between;
+}
+
+.profile {
+	margin-top: 1rem;
+	margin-right: 2rem;
+	width: 4.5%;
+	height: 4.5%;
+}
+
+.dots {
+	margin-top: 1rem;
+	margin-left: 2rem;
+	margin-bottom: 1.5rem;
+	width: 8%;
+	height: 8%;
+} */
+
+.top--container {
+	display: flex;
+	justify-content: space-between;
+}
+
+.nav {
+	display: flex;
+	justify-content: space-between;
+	height: 75px;
+	padding: 1rem;
+}
+
+.profile {
+	height: 100%;
+}
+
+.dots {
+	margin-top: 1rem;
+	margin-left: 2rem;
+	margin-bottom: 1.5rem;
+	width: 3rem;
+	height: 3rem;
+}
+
+.label--welcome {
+	font-size: 2.5rem;
+	margin-left: 5rem;
+	font-weight: 500;
+}
+
+.total--spending {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 3rem;
+	font-size: 2rem;
+	width: 100%;
+}
+
+.label--total {
+	margin-left: 5rem;
+}
+
+.label--cost {
+	margin-right: 8rem;
+	background-color: #64a9a5;
+	padding: 0.1rem 1.4rem;
+	border-radius: 50px;
+}
+
+.individual--spending {
+	display: block;
+	width: 100%;
+	margin: auto;
+	text-align: center;
+	margin-top: 2rem;
+}
+
+.all--stat {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	margin: auto;
+	width: 60%;
+	margin-top: 2rem;
+}
+
+.label--individual {
+	margin-top: 3rem;
+	font-size: 2rem;
+	text-align: center;
+}
+
+.name {
+	text-align: center !important;
+	font-size: 1.5rem;
+}
+
+@property --p {
+	syntax: '<number>';
+	inherits: true;
+	initial-value: 0;
+}
+
+.pie {
+	--p: 20;
+	--b: 22px;
+	--c: darkred;
+	--w: 150px;
+
+	width: var(--w);
+	aspect-ratio: 1;
+	position: relative;
+	display: inline-grid;
+	margin: 5px;
+	place-content: center;
+	font-size: 25px;
+	font-weight: bold;
+	font-family: sans-serif;
+	color: #64a9a5;
+	background-color: white;
+	border-radius: 50%;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.pie:before,
+.pie:after {
+	content: '';
+	position: absolute;
+	border-radius: 50%;
+}
+.pie:before {
+	inset: 0;
+	background: radial-gradient(farthest-side, var(--c) 98%, #0000) top/var(--b)
+			var(--b) no-repeat,
+		conic-gradient(var(--c) calc(var(--p) * 1%), #0000 0);
+	-webkit-mask: radial-gradient(
+		farthest-side,
+		#0000 calc(99% - var(--b)),
+		#000 calc(100% - var(--b))
+	);
+	mask: radial-gradient(
+		farthest-side,
+		#0000 calc(99% - var(--b)),
+		#000 calc(100% - var(--b))
+	);
+}
+.pie:after {
+	inset: calc(50% - var(--b) / 2);
+	background: var(--c);
+	transform: rotate(calc(var(--p) * 3.6deg))
+		translateY(calc(50% - var(--w) / 2));
+}
+.animate {
+	animation: p 1s 0.5s both;
+}
+.no-round:before {
+	background-size: 0 0, auto;
+}
+.no-round:after {
+	content: none;
+}
+@keyframes p {
+	from {
+		--p: 0;
+	}
+}
+
+.grp--card {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-gap: 4rem 35%;
+	width: 60%;
+	margin: auto;
+	margin-top: 7rem;
+	margin-bottom: 4rem;
+}
+
+.card {
+	width: 100%;
+	background-color: #fff;
+	border: 1px solid rgba(100, 169, 165, 0.43);
+	box-sizing: border-box;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	font-size: 1.5rem;
+}
+
+.know--more {
+	color: #64a9a5;
+	font-size: 0.8rem;
+	text-decoration: underline solid #64a9a5;
+	margin-left: auto;
+	cursor: pointer;
+	margin-top: 2rem;
+	text-align: right;
+	padding: 1rem;
+}
+
+.details {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.card--cost {
+	margin-right: 0;
+	margin-top: 1rem;
+}
+
+.name--card,
+.status {
+	margin-top: 1rem;
+}
+
+.bottom--design {
+	display: flex;
+	justify-content: flex-end;
+}
